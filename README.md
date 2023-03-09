@@ -3,16 +3,17 @@
 [![License][license-src]][license-href]
 [![Nuxt][nuxt-src]][nuxt-href]
 
-# Nuxt Well Known
+# Nuxt Well-Known
 
-> Nuxt module to add well-known files and rules with middlewares
+> Nuxt module to handle `.well-known` URIs with middlewares
+> See https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml
 
-Nuxt Well Known module is integrated with the [Nuxt Devtools](https://github.com/nuxt/devtools).
+Nuxt Well-Known module is integrated with the [Nuxt Devtools](https://github.com/nuxt/devtools).
 
-## Well Known Supported
+## Well-Known URIs Supported
 
-- change-password
-- security.txt
+- `change-password`
+- `security.txt`
 
 ## Quick Setup
 
@@ -45,7 +46,7 @@ export default defineNuxtConfig({
     },
     changePassword: {
       disabled: false,
-      url: 'http://example.com/password-recovery'
+      url: 'https://example.com/password-recovery'
     }
   }
 })
@@ -68,9 +69,9 @@ interface ModuleOptions {
 
 ### Middlewares
 
-#### security.txt
+#### `security.txt`
 
-This middleware will generate a security.txt file on `/.well-known/security.txt`
+This middleware will generate a `security.txt` file available under `/.well-known/security.txt` URI.
 
 Model options:
 
@@ -88,9 +89,9 @@ type SecurityTxtOptions = {
 }
 ```
 
-#### change-password
+#### `change-password`
 
-This middleware will generate a redirection for the browser on URL `/.well-known/change-password`
+This middleware will redirect requests of `/.well-known/change-password` to the configured target URL.
 
 ```ts
 type ChangePasswordOptions = {
@@ -99,7 +100,7 @@ type ChangePasswordOptions = {
 }
 ```
 
-That's it! You can now use Nuxt Well Known in your Nuxt app ✨
+That's it! You can now use Nuxt Well-Known in your Nuxt app ✨
 
 ## Contributing
 
