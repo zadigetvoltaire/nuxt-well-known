@@ -1,10 +1,17 @@
-import {defineNuxtModule, addServerHandler, createResolver, addTemplate} from '@nuxt/kit'
-// import { name, version } from '../package.json'
-import type {ChangePasswordOptions, SecurityTxtOptions} from './types'
+import { defineNuxtModule, addServerHandler, createResolver, addTemplate } from '@nuxt/kit'
+import { setupDevToolsUI } from './devtools'
+import type { ChangePasswordOptions, SecurityTxtOptions } from './types'
 
-export type ModuleOptions = {
+// Module options TypeScript interface definition
+export interface ModuleOptions {
   securityTxt?: SecurityTxtOptions,
   changePassword?: ChangePasswordOptions,
+  /**
+   * Enable Nuxt Devtools integration
+   *
+   * @default true
+   */
+  devtools: boolean
 }
 
 const WELL_KNOWN_PREFIX = '.well-known'
@@ -13,16 +20,15 @@ const CHANGE_PASSWORD_PATH = 'change-password'
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'well-known',
-    version: '0.1.0',
-    configKey: 'wellKnown',
-    compatibility: {
-      bridge: true
-    }
+    name: 'nuxt-well-known',
+    configKey: 'wellKnown'
   },
-  defaults: {},
-  async setup(options, nuxt) {
-    const {resolve} = createResolver(import.meta.url)
+  // Default configuration options of the Nuxt module
+  defaults: {
+    devtools: true
+  },
+  setup (options, nuxt) {
+    const { resolve } = createResolver(import.meta.url)
 
     nuxt.options.alias['#well-known'] = addTemplate({
       filename: 'well-known.mjs',
@@ -33,18 +39,22 @@ export default defineNuxtModule<ModuleOptions>({
     const runtimeDir = resolve('./runtime')
     nuxt.options.build.transpile.push(runtimeDir)
 
-    if (options.securityTxt?.enabled === true) {
+    if (options.securityTxt?.disabled !== true) {
       addServerHandler({
         route: `/${WELL_KNOWN_PREFIX}/${SECURITY_TXT_FILENAME}`,
         handler: resolve(runtimeDir, 'server/middleware/security-txt')
       })
     }
 
-    if (options.changePassword?.enabled === true) {
+    if (options.changePassword?.disabled !== true) {
       addServerHandler({
         route: `/${WELL_KNOWN_PREFIX}/${CHANGE_PASSWORD_PATH}`,
         handler: resolve(runtimeDir, 'server/middleware/change-password')
       })
+    }
+
+    if (options.devtools) {
+      setupDevToolsUI(nuxt, resolve)
     }
   }
 })

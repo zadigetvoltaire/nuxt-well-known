@@ -1,5 +1,5 @@
 export type SecurityTxtOptions = {
-  enabled: boolean;
+  disabled?: boolean;
   contacts: string[]; // https://www.rfc-editor.org/rfc/rfc9116#section-2.5.3
   expires: string | Date; // https://www.rfc-editor.org/rfc/rfc9116#section-2.5.5
   encryption?: string[]; // https://www.rfc-editor.org/rfc/rfc9116#section-2.5.4
@@ -11,6 +11,6 @@ export type SecurityTxtOptions = {
 }
 
 export type ChangePasswordOptions = {
-  enabled: boolean;
+  disabled?: boolean;
   url: string;
 }

@@ -1,14 +1,15 @@
-import {defineEventHandler, setHeader} from 'h3';
-import {SecurityTxtOptions} from '../../../types';
+import { defineEventHandler, setHeader } from 'h3'
+import { SecurityTxtOptions } from '../../../types'
 // @ts-ignore
 import wellKnownOptions from '#well-known'
 
-export default defineEventHandler(async (event) => {
+export default defineEventHandler((event) => {
   setHeader(event, 'Content-Type', 'text/plain')
-  return render(wellKnownOptions.securityTxt);
+
+  return render(wellKnownOptions.securityTxt)
 })
 
-function render(options: SecurityTxtOptions) {
+function render (options: SecurityTxtOptions) {
   const mapping: Record<string, string> = {
     contacts: 'Contact',
     expires: 'Expires',
@@ -17,40 +18,33 @@ function render(options: SecurityTxtOptions) {
     preferredLanguages: 'Preferred-Languages',
     canonical: 'Canonical',
     policy: 'Policy',
-    hiring: 'Hiring',
+    hiring: 'Hiring'
   }
 
-  const securityTxtOutput: string[] = [];
+  const securityTxtOutput: string[] = []
 
   Object.keys(mapping).forEach((key: string) => {
-    if (key === 'enabled') {
-      return;
-    }
+    const optionKey = options[key]
 
-    // @ts-ignore
-    if (options[key]) {
+    if (optionKey) {
       if (key === 'preferredLanguages') {
-        // @ts-ignore
-        securityTxtOutput.push(`${mapping[key]}: ${options[key].join(', ')}`)
-        return;
+        securityTxtOutput.push(`${mapping[key]}: ${optionKey.join(', ')}`)
+        return
       }
 
       if (key === 'expires') {
         // Check if Date object or
-        // @ts-ignore
-        securityTxtOutput.push(`${mapping[key]}: ${options[key]}`)
-        return;
+        securityTxtOutput.push(`${mapping[key]}: ${optionKey}`)
+        return
       }
 
-      // @ts-ignore
-      options[key].forEach((value: string) => {
-        // @ts-ignore
+      optionKey.forEach((value: string) => {
         securityTxtOutput.push(`${mapping[key]}: ${value}`)
       })
     }
-  });
+  })
 
-  securityTxtOutput.push(''); // Trailing new line
+  securityTxtOutput.push('') // Trailing new line
 
   return securityTxtOutput.join('\n')
 }
