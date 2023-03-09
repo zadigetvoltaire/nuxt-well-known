@@ -33,7 +33,7 @@ function render (options: SecurityTxtOptions) {
       }
 
       if (key === 'expires') {
-        // Check if Date object or
+        // Check if Date object or string
         securityTxtOutput.push(`${mapping[key]}: ${optionKey}`)
         return
       }
