@@ -2,12 +2,13 @@ name: Test Unit
 
 on:
   push:
-    branch: ["main"]
+    branches:
+      - main
     paths:
       - ".github/workflows/test-units.yml"
   pull_request:
-    types:
-      - opened
+    paths:
+      - "*"
 
 jobs:
   test-units:
