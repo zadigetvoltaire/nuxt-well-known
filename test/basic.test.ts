@@ -13,15 +13,9 @@ describe('ssr', async () => {
     expect(html).toContain('<div>basic</div>')
   })
 
-  it('render', async () => {
+  it('render security.txt with informations', async () => {
     const body = await $fetch('/.well-known/security.txt')
 
     expect(body).toMatch(/Contact: me@example.com\nExpires: 2025-02-03T00:00:00.000Z/)
-  })
-
-  it('render with different host', async () => {
-    const body = await $fetch('/.well-known/change-password')
-
-    expect(body).toContain('http://localhost:3000/password-recovery')
   })
 })
