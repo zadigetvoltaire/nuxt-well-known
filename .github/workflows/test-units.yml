@@ -1,7 +1,8 @@
-name: Cli Test Lint
+name: Test Unit
 
 on:
   push:
+    branch: ["main"]
     paths:
       - ".github/workflows/test-units.yml"
   pull_request:
@@ -9,7 +10,7 @@ on:
       - opened
 
 jobs:
-  lib-test-lint:
+  test-units:
     runs-on: ubuntu-latest
 
     steps:
