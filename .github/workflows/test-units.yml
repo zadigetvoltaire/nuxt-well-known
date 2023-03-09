@@ -33,5 +33,5 @@ jobs:
       - name: Prepare project
         run: pnpm dev:prepare
 
-      - name: Run linters
+      - name: Run test unit
         run: pnpm test
