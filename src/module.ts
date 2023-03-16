@@ -1,12 +1,12 @@
 import { defineNuxtModule, addServerHandler, createResolver, addTemplate } from '@nuxt/kit'
 import { setupDevToolsUI } from './devtools'
-import type { ChangePasswordOptions, SecurityTxtOptions, ContentUrlOptions } from './types'
+import type { ChangePasswordOptions, SecurityTxtOptions, ContentUriOptions } from './types'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
   securityTxt?: SecurityTxtOptions,
   changePassword?: ChangePasswordOptions,
-  contentUrls?: ContentUrlOptions[],
+  contentUris?: ContentUriOptions[],
   /**
    * Enable Nuxt Devtools integration
    *
@@ -54,12 +54,12 @@ export default defineNuxtModule<ModuleOptions>({
       })
     }
 
-    if (options.contentUrls) {
-      for (const contentUrl of options.contentUrls) {
-        if (!contentUrl?.disabled) {
+    if (options.contentUris) {
+      for (const contentUri of options.contentUris) {
+        if (!contentUri?.disabled) {
           addServerHandler({
-            route: `/${WELL_KNOWN_PREFIX}/${contentUrl.url}`,
-            handler: resolve(runtimeDirectory, 'server/middleware/content-url')
+            route: `/${WELL_KNOWN_PREFIX}/${contentUri.path}`,
+            handler: resolve(runtimeDirectory, 'server/middleware/content-uri')
           })
         }
       }

@@ -17,7 +17,7 @@ Nuxt Well-Known module is integrated with the [Nuxt Devtools](https://github.com
 
 1. [`security.txt`](#securitytxt)
 2. [`change-password`](#change-password)
-3. Dynamic routes with content: [`content-urls`](#content-urls)
+3. Dynamic routes with content: [`content-uris`](#content-uris)
 
 ## Quick Setup
 
@@ -68,7 +68,7 @@ interface ModuleOptions {
   devtools: boolean
   securityTxt?: SecurityTxtOptions,
   changePassword?: ChangePasswordOptions,
-  contentUrls?: ContentUrlOptions[],
+  contentUris?: ContentUriOptions[],
 }
 ```
 
@@ -105,14 +105,14 @@ type ChangePasswordOptions = {
 }
 ```
 
-#### `content-urls`
+#### `content-uris`
 
 With this middleware, you can generate urls with content
 
 ```ts
-type ContentUrlOptions = {
+type ContentUriOptions = {
   disabled?: boolean;
-  url: string;
+  path: string;
   content: string;
 }
 ```
@@ -126,9 +126,9 @@ export default defineNuxtConfig({
     'nuxt-well-known',
   ],
   wellKnown: {
-    contentUrls: [
-      { url: 'apple-developer-merchantid-domain-association', content: 'merchantid' },
-      { url: 'content-url.txt', content: 'content-url' }
+    contentUris: [
+      { path: 'apple-developer-merchantid-domain-association', content: 'merchantid' },
+      { path: 'content-uri.txt', content: 'content-uri' }
     ]
   }
 })
@@ -136,7 +136,7 @@ export default defineNuxtConfig({
 
 Will render
 - https://example.com/.well-known/apple-developer-merchantid-domain-association --> `merchantid`
-- https://example.com/.well-known/content-url.txt --> `content-url`
+- https://example.com/.well-known/content-uri.txt --> `content-uri`
 
 ---
 

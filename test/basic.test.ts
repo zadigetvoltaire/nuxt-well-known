@@ -25,9 +25,9 @@ describe('ssr', async () => {
     expect(body).toMatch(/merchantid/)
   })
 
-  it('render content-url.txt with right content', async () => {
-    const body = await $fetch('/.well-known/content-url.txt')
+  it('render content-uri.txt with right content', async () => {
+    const body = await $fetch('/.well-known/content-uri.txt')
 
-    expect(body).toMatch(/content-url/)
+    expect(body).toMatch(/content-uri/)
   })
 })

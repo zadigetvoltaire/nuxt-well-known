@@ -18,7 +18,7 @@ export interface ChangePasswordOptions extends DefaultOptions {
   redirectTo: string;
 }
 
-export interface ContentUrlOptions extends DefaultOptions {
-  url: string;
+export interface ContentUriOptions extends DefaultOptions {
+  path: string;
   content: string;
 }

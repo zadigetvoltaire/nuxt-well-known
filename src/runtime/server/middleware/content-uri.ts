@@ -1,5 +1,5 @@
 import { defineEventHandler, setHeader, sendError, H3Error } from 'h3'
-import { ContentUrlOptions } from '../../../types'
+import { ContentUriOptions } from '../../../types'
 // @ts-ignore
 import wellKnownOptions from '#well-known'
 
@@ -14,9 +14,9 @@ export default defineEventHandler((event) => {
 
   const path = url.split('/').pop()
 
-  return render(wellKnownOptions.contentUrls.find(({ url }) => url === path))
+  return render(wellKnownOptions.contentUris.find(({ path: optionPath }) => optionPath === path))
 })
 
-function render (options: ContentUrlOptions) {
+function render (options: ContentUriOptions) {
   return options.content
 }
