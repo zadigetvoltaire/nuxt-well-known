@@ -1,5 +1,5 @@
 {
-  "name": "nuxt-well-known",
+  "name": "@zadigetvoltaire/nuxt-well-known",
   "version": "1.0.0",
   "description": "Nuxt module to add well-known files and rules with middlewares",
   "license": "MIT",

@@ -21,7 +21,7 @@ const CHANGE_PASSWORD_PATH = 'change-password'
 
 export default defineNuxtModule<ModuleOptions>({
   meta: {
-    name: 'nuxt-well-known',
+    name: '@zadigetvoltaire/nuxt-well-known',
     configKey: 'wellKnown'
   },
   // Default configuration options of the Nuxt module
