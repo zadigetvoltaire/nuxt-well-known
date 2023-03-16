@@ -6,6 +6,9 @@
     <a href="http://localhost:3000/.well-known/change-password">
       Go to http://localhost:3000/.well-known/change-password, you will be redirected to http://localhost:3000/password-recovery
     </a>
+    <a href="http://localhost:3000/.well-known/test">
+      Go to http://localhost:3000/.well-known/test
+    </a>
   </main>
 </template>
 

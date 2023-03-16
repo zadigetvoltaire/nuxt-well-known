@@ -13,7 +13,11 @@ export default defineNuxtConfig({
     },
     changePassword: {
       disabled: false,
-      url: 'http://localhost:3000/password-recovery'
-    }
+      redirectTo: 'http://localhost:3000/password-recovery'
+    },
+    contentUrls: [
+      { url: 'apple-developer-merchantid-domain-association', content: 'merchantid' },
+      { url: 'content-url.txt', content: 'content-url' }
+    ]
   }
 })
