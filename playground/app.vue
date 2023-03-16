@@ -6,6 +6,12 @@
     <a href="http://localhost:3000/.well-known/change-password">
       Go to http://localhost:3000/.well-known/change-password, you will be redirected to http://localhost:3000/password-recovery
     </a>
+    <a href="http://localhost:3000/.well-known/content-uri.txt">
+      Go to http://localhost:3000/.well-known/content-uri.txt
+    </a>
+    <a href="http://localhost:3000/.well-known/apple-developer-merchantid-domain-association">
+      Go to http://localhost:3000/.well-known/apple-developer-merchantid-domain-association
+    </a>
   </main>
 </template>
 

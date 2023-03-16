@@ -1,11 +1,12 @@
 import { defineNuxtModule, addServerHandler, createResolver, addTemplate } from '@nuxt/kit'
 import { setupDevToolsUI } from './devtools'
-import type { ChangePasswordOptions, SecurityTxtOptions } from './types'
+import type { ChangePasswordOptions, SecurityTxtOptions, ContentUriOptions } from './types'
 
 // Module options TypeScript interface definition
 export interface ModuleOptions {
   securityTxt?: SecurityTxtOptions,
   changePassword?: ChangePasswordOptions,
+  contentUris?: ContentUriOptions[],
   /**
    * Enable Nuxt Devtools integration
    *
@@ -33,24 +34,35 @@ export default defineNuxtModule<ModuleOptions>({
     nuxt.options.alias['#well-known'] = addTemplate({
       filename: 'well-known.mjs',
       write: true,
-      getContents: () => `export default ${JSON.stringify(options, null, 2)}`
+      getContents: () => `export default ${JSON.stringify(options, undefined, 2)}`
     }).dst || ''
 
-    const runtimeDir = resolve('./runtime')
-    nuxt.options.build.transpile.push(runtimeDir)
+    const runtimeDirectory = resolve('./runtime')
+    nuxt.options.build.transpile.push(runtimeDirectory)
 
-    if (options.securityTxt?.disabled !== true) {
+    if (!options.securityTxt?.disabled) {
       addServerHandler({
         route: `/${WELL_KNOWN_PREFIX}/${SECURITY_TXT_FILENAME}`,
-        handler: resolve(runtimeDir, 'server/middleware/security-txt')
+        handler: resolve(runtimeDirectory, 'server/middleware/security-txt')
       })
     }
 
-    if (options.changePassword?.disabled !== true) {
+    if (!options.changePassword?.disabled) {
       addServerHandler({
         route: `/${WELL_KNOWN_PREFIX}/${CHANGE_PASSWORD_PATH}`,
-        handler: resolve(runtimeDir, 'server/middleware/change-password')
+        handler: resolve(runtimeDirectory, 'server/middleware/change-password')
       })
+    }
+
+    if (options.contentUris) {
+      for (const contentUri of options.contentUris) {
+        if (!contentUri?.disabled) {
+          addServerHandler({
+            route: `/${WELL_KNOWN_PREFIX}/${contentUri.path}`,
+            handler: resolve(runtimeDirectory, 'server/middleware/content-uri')
+          })
+        }
+      }
     }
 
     if (options.devtools) {

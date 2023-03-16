@@ -1,4 +1,8 @@
-export type SecurityTxtOptions = {
+export interface DefaultOptions {
+  disabled?: boolean;
+}
+
+export interface SecurityTxtOptions extends DefaultOptions {
   disabled?: boolean;
   contacts: string[]; // https://www.rfc-editor.org/rfc/rfc9116#section-2.5.3
   expires: string | Date; // https://www.rfc-editor.org/rfc/rfc9116#section-2.5.5
@@ -10,7 +14,11 @@ export type SecurityTxtOptions = {
   hiring?: string[]; // https://www.rfc-editor.org/rfc/rfc9116#section-2.5.6
 }
 
-export type ChangePasswordOptions = {
-  disabled?: boolean;
-  url: string;
+export interface ChangePasswordOptions extends DefaultOptions {
+  redirectTo: string;
+}
+
+export interface ContentUriOptions extends DefaultOptions {
+  path: string;
+  content: string;
 }

@@ -1,3 +1,5 @@
+<!-- omit in toc -->
+
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
@@ -10,10 +12,12 @@
 
 Nuxt Well-Known module is integrated with the [Nuxt Devtools](https://github.com/nuxt/devtools).
 
+
 ## Well-Known URIs Supported
 
-- `change-password`
-- `security.txt`
+1. [`security.txt`](#securitytxt)
+2. [`change-password`](#change-password)
+3. Dynamic routes with content: [`content-uris`](#content-uris)
 
 ## Quick Setup
 
@@ -46,7 +50,7 @@ export default defineNuxtConfig({
     },
     changePassword: {
       disabled: false,
-      url: 'https://example.com/password-recovery'
+      redirectTo: 'https://example.com/password-recovery'
     }
   }
 })
@@ -64,6 +68,7 @@ interface ModuleOptions {
   devtools: boolean
   securityTxt?: SecurityTxtOptions,
   changePassword?: ChangePasswordOptions,
+  contentUris?: ContentUriOptions[],
 }
 ```
 
@@ -96,9 +101,44 @@ This middleware will redirect requests of `/.well-known/change-password` to the 
 ```ts
 type ChangePasswordOptions = {
   disabled?: boolean;
-  url: string;
+  redirectTo: string;
 }
 ```
+
+#### `content-uris`
+
+With this middleware, you can generate urls with content
+
+```ts
+type ContentUriOptions = {
+  disabled?: boolean;
+  path: string;
+  content: string;
+}
+```
+
+**Example:**
+
+```ts
+// nuxt.config.ts
+export default defineNuxtConfig({
+  modules: [
+    'nuxt-well-known',
+  ],
+  wellKnown: {
+    contentUris: [
+      { path: 'apple-developer-merchantid-domain-association', content: 'merchantid' },
+      { path: 'content-uri.txt', content: 'content-uri' }
+    ]
+  }
+})
+```
+
+Will render
+- https://example.com/.well-known/apple-developer-merchantid-domain-association --> `merchantid`
+- https://example.com/.well-known/content-uri.txt --> `content-uri`
+
+---
 
 That's it! You can now use Nuxt Well-Known in your Nuxt app ✨
 

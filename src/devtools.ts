@@ -1,4 +1,4 @@
-import { existsSync } from 'fs'
+import { existsSync } from 'node:fs'
 import { Nuxt } from 'nuxt/schema'
 import { Resolver } from '@nuxt/kit'
 
