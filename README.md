@@ -12,7 +12,6 @@
 
 Nuxt Well-Known module is integrated with the [Nuxt Devtools](https://github.com/nuxt/devtools).
 
-
 ## Well-Known URIs Supported
 
 1. [`security.txt`](#securitytxt)
@@ -134,9 +133,10 @@ export default defineNuxtConfig({
 })
 ```
 
-Will render
-- https://example.com/.well-known/apple-developer-merchantid-domain-association --> `merchantid`
-- https://example.com/.well-known/content-uri.txt --> `content-uri`
+Will render:
+
+- `https://example.com/.well-known/apple-developer-merchantid-domain-association` --> `merchantid`
+- `https://example.com/.well-known/content-uri.txt` --> `content-uri`
 
 ---
 
@@ -160,10 +160,31 @@ pnpm lint
 # Run Vitest
 pnpm test
 pnpm test:watch
+```
 
-# Release new version
+## Release new version
+
+1. Execute release command
+
+⚠ This command should be executed only on the main branch
+
+This command will:
+
+- Run the tests and linter
+- Generate the changelog
+- Push it
+- Bump the package version
+- Create and push the new tag
+
+```bash
 pnpm release
 ```
+
+2. Create a new release
+
+To trigger auto publish ci pipeline, you should create a new release on Github: [Create Release](https://github.com/zadigetvoltaire/nuxt-well-known/releases/new)
+
+---
 
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/@zadig-voltaire/nuxt-well-known/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
