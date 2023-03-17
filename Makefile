@@ -4,4 +4,4 @@ start:
 	pnpm dev
 
 release:
-	changelogen --release && git push --follow-tags
+	pnpm release

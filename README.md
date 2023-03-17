@@ -170,14 +170,12 @@ pnpm test:watch
 
 This command will:
 
-- Run the tests and linter
-- Generate the changelog
-- Push it
+- Generate the CHANGELOG.md and push it with a release commit
 - Bump the package version
 - Create and push the new tag
 
 ```bash
-make release
+pnpm release
 ```
 
 2. Create a new release
