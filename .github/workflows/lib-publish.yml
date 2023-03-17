@@ -3,11 +3,11 @@ name: Lib Publish To Npm
 on:
   release:
     types: [created]
-  push:
-    branches:
-      - main
-    paths:
-      - ".github/workflows/lib-publish.yml"
+  # push:
+  #   branches:
+  #     - main
+  #   paths:
+  #     - ".github/workflows/lib-publish.yml"
 
 jobs:
   lib-publish:
@@ -34,7 +34,7 @@ jobs:
         run: pnpm dev:prepare
 
       - name: Build Lib
-        run: pnpm build
+        run: pnpm prepack
 
       - name: Publish package to npm registry
         run: pnpm publish --access public --no-git-checks
