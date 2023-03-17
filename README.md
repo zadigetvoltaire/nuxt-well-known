@@ -20,25 +20,25 @@ Nuxt Well-Known module is integrated with the [Nuxt Devtools](https://github.com
 
 ## Quick Setup
 
-1. Add `@zadig-voltaire/nuxt-well-known` dependency to your project
+1. Add `@zadigetvoltaire/nuxt-well-known` dependency to your project
 
 ```bash
 # Using pnpm
-pnpm add -D @zadig-voltaire/nuxt-well-known
+pnpm add -D @zadigetvoltaire/nuxt-well-known
 
 # Using yarn
-yarn add --dev @zadig-voltaire/nuxt-well-known
+yarn add --dev @zadigetvoltaire/nuxt-well-known
 
 # Using npm
-npm install --save-dev @zadig-voltaire/nuxt-well-known
+npm install --save-dev @zadigetvoltaire/nuxt-well-known
 ```
 
-2. Add `@zadig-voltaire/nuxt-well-known` to the `modules` section of `nuxt.config.ts`
+2. Add `@zadigetvoltaire/nuxt-well-known` to the `modules` section of `nuxt.config.ts`
 
 ```js
 export default defineNuxtConfig({
   modules: [
-    '@zadig-voltaire/nuxt-well-known'
+    '@zadigetvoltaire/nuxt-well-known'
   ],
   wellKnown: {
     devtools: true,
@@ -122,7 +122,7 @@ type ContentUriOptions = {
 // nuxt.config.ts
 export default defineNuxtConfig({
   modules: [
-    '@zadig-voltaire/nuxt-well-known',
+    '@zadigetvoltaire/nuxt-well-known',
   ],
   wellKnown: {
     contentUris: [
@@ -182,14 +182,14 @@ pnpm release
 ---
 
 <!-- Badges -->
-[npm-version-src]: https://img.shields.io/npm/v/@zadig-voltaire/nuxt-well-known/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-version-href]: https://npmjs.com/package/@zadig-voltaire/nuxt-well-known
+[npm-version-src]: https://img.shields.io/npm/v/@zadigetvoltaire/nuxt-well-known/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-version-href]: https://npmjs.com/package/@zadigetvoltaire/nuxt-well-known
 
-[npm-downloads-src]: https://img.shields.io/npm/dm/@zadig-voltaire/nuxt-well-known.svg?style=flat&colorA=18181B&colorB=28CF8D
-[npm-downloads-href]: https://npmjs.com/package/@zadig-voltaire/nuxt-well-known
+[npm-downloads-src]: https://img.shields.io/npm/dm/@zadigetvoltaire/nuxt-well-known.svg?style=flat&colorA=18181B&colorB=28CF8D
+[npm-downloads-href]: https://npmjs.com/package/@zadigetvoltaire/nuxt-well-known
 
-[license-src]: https://img.shields.io/npm/l/@zadig-voltaire/nuxt-well-known.svg?style=flat&colorA=18181B&colorB=28CF8D
-[license-href]: https://npmjs.com/package/@zadig-voltaire/nuxt-well-known
+[license-src]: https://img.shields.io/npm/l/@zadigetvoltaire/nuxt-well-known.svg?style=flat&colorA=18181B&colorB=28CF8D
+[license-href]: https://npmjs.com/package/@zadigetvoltaire/nuxt-well-known
 
 [nuxt-src]: https://img.shields.io/badge/Nuxt-18181B?logo=nuxt.js
 [nuxt-href]: https://nuxt.com
