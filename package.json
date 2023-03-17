@@ -1,6 +1,6 @@
 {
   "name": "@zadig-voltaire/nuxt-well-known",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Nuxt module to add well-known files and rules with middlewares",
   "license": "MIT",
   "type": "module",
@@ -24,7 +24,7 @@
     "dev:prepare": "nuxt-module-build --stub && nuxi prepare client",
     "play:dev": "nuxi dev playground",
     "play:prod": "npm run prepack && nuxi dev playground",
-    "release": "changelogen --release && git push --follow-tags",
+    "release": "changelogen --release",
     "lint": "cross-env NODE_ENV=production eslint .",
     "test": "vitest run",
     "test:watch": "vitest watch"
