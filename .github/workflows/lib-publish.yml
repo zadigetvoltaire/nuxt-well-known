@@ -9,11 +9,6 @@ on:
     paths:
       - ".github/workflows/lib-publish.yml"
 
-# on:
-#   push:
-#     tags:
-#       - v*.*.*
-
 jobs:
   lib-publish:
     runs-on: ubuntu-latest
@@ -42,6 +37,6 @@ jobs:
         run: pnpm build
 
       - name: Publish package to npm registry
-        run: cd dist && pnpm publish --access public --no-git-checks
+        run: pnpm publish --access public --no-git-checks
         env:
           NODE_AUTH_TOKEN: ${{ secrets.NPM_ACCESS_TOKEN }}
