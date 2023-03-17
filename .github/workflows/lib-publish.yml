@@ -33,6 +33,12 @@ jobs:
       - name: Prepare env
         run: pnpm dev:prepare
 
+      - name: Run linter
+        run: pnpm lint
+
+      - name: Run tests
+        run: pnpm test
+
       - name: Build Lib
         run: pnpm prepack
 

@@ -177,7 +177,7 @@ This command will:
 - Create and push the new tag
 
 ```bash
-pnpm release
+make release
 ```
 
 2. Create a new release
