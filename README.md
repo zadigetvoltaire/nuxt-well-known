@@ -7,7 +7,7 @@
 
 # Nuxt Well-Known
 
-> Nuxt module to handle `.well-known` URIs with middlewares
+> Nuxt (v3.x) module to handle `.well-known` URIs with middlewares
 > See https://www.iana.org/assignments/well-known-uris/well-known-uris.xhtml
 
 Nuxt Well-Known module is integrated with the [Nuxt Devtools](https://github.com/nuxt/devtools).
