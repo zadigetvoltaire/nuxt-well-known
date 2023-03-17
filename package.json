@@ -64,7 +64,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/zadigetvoltaire/nuxt-well-known/maz-ui.git"
+    "url": "git+https://github.com/zadigetvoltaire/nuxt-well-known.git"
   },
   "keywords": [
     "nuxt",
@@ -77,7 +77,7 @@
   ],
   "author": "Zadig&Voltaire",
   "bugs": {
-    "url": "https://github.com/zadigetvoltaire/nuxt-well-known/maz-ui/issues"
+    "url": "https://github.com/zadigetvoltaire/nuxt-well-known/issues"
   },
   "homepage": "https://github.com/zadigetvoltaire/nuxt-well-known#readme",
   "changelog": {
