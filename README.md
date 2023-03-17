@@ -173,14 +173,11 @@ This command will:
 - Generate the CHANGELOG.md and push it with a release commit
 - Bump the package version
 - Create and push the new tag
+- Create a github release to trigger the library publish pipeline
 
 ```bash
 pnpm release
 ```
-
-2. Create a new release
-
-To trigger auto publish ci pipeline, you should create a new release on Github: [Create Release](https://github.com/zadigetvoltaire/nuxt-well-known/releases/new)
 
 ---
 
