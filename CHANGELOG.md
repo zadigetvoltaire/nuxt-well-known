@@ -5,6 +5,25 @@
 
 [compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.3...v0.0.4)
 
+
+### 🏡 Chore
+
+  - **release:** V0.0.4 ([9d25307](https://github.com/zadigetvoltaire/nuxt-well-known/commit/9d25307))
+  - Add git push in release cmd ([8c9e1f9](https://github.com/zadigetvoltaire/nuxt-well-known/commit/8c9e1f9))
+  - Changelog config ([af737f5](https://github.com/zadigetvoltaire/nuxt-well-known/commit/af737f5))
+
+### 🤖 CI
+
+  - Test build only when pipeline change on main branch ([063d3ff](https://github.com/zadigetvoltaire/nuxt-well-known/commit/063d3ff))
+
+### ❤️  Contributors
+
+- LouisMazel <mazuel.loic@gmail.com>
+
+## v0.0.4
+
+[compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.3...v0.0.4)
+
 ## v0.0.3
 
 [compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.2...v0.0.3)
