@@ -79,5 +79,10 @@
   "bugs": {
     "url": "https://github.com/zadigetvoltaire/nuxt-well-known/maz-ui/issues"
   },
-  "homepage": "https://github.com/zadigetvoltaire/nuxt-well-known#readme"
+  "homepage": "https://github.com/zadigetvoltaire/nuxt-well-known#readme",
+  "changelog": {
+    "repo": {
+      "provider": "github"
+    }
+  }
 }
