@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.0.5
+
+[compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.4...v0.0.5)
+
+
+### 💅 Refactors
+
+  - Update scope package organization to zadigetvoltaire ([ad5e14b](https://github.com/zadigetvoltaire/nuxt-well-known/commit/ad5e14b))
+
+### ❤️  Contributors
+
+- LouisMazel <mazuel.loic@gmail.com>
+
 ## v0.0.4
 
 [compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.3...v0.0.4)
