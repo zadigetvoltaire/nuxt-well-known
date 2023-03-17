@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.0.3
+
+[compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.2...v0.0.3)
+
+
+### 🤖 CI
+
+  - Auto publish lib on new tag pushed ([caad48c](https://github.com/zadigetvoltaire/nuxt-well-known/commit/caad48c))
+
+### ❤️  Contributors
+
+- LouisMazel <mazuel.loic@gmail.com>
+
 ## v0.0.2
 
 [compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.1...v0.0.2)
