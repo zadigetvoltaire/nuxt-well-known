@@ -61,5 +61,23 @@
         "vite"
       ]
     }
-  }
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zadigetvoltaire/nuxt-well-known/maz-ui.git"
+  },
+  "keywords": [
+    "nuxt",
+    "nuxt3",
+    "module",
+    "nuxt-module",
+    "middleware",
+    "well-known",
+    "open-source"
+  ],
+  "author": "Zadig&Voltaire",
+  "bugs": {
+    "url": "https://github.com/zadigetvoltaire/nuxt-well-known/maz-ui/issues"
+  },
+  "homepage": "https://github.com/zadigetvoltaire/nuxt-well-known#readme"
 }
