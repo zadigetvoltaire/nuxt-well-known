@@ -1,6 +1,23 @@
 # Changelog
 
 
+## v0.0.2
+
+[compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.1...v0.0.2)
+
+
+### 📖 Documentation
+
+  - Update README.md about release process ([b428298](https://github.com/zadigetvoltaire/nuxt-well-known/commit/b428298))
+
+### 🏡 Chore
+
+  - Correct package meta typo ([97f1ebd](https://github.com/zadigetvoltaire/nuxt-well-known/commit/97f1ebd))
+
+### ❤️  Contributors
+
+- LouisMazel <mazuel.loic@gmail.com>
+
 ## v0.0.1
 
 [compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.0...v0.0.1)
