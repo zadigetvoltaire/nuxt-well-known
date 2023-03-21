@@ -1,6 +1,25 @@
 # Changelog
 
 
+## v0.0.6
+
+[compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.5...v0.0.6)
+
+
+### 📖 Documentation
+
+  - Update README.md about nuxt mode ([eac52a8](https://github.com/zadigetvoltaire/nuxt-well-known/commit/eac52a8))
+  - Add link to changelog in README.md ([7ed5331](https://github.com/zadigetvoltaire/nuxt-well-known/commit/7ed5331))
+
+### 🏡 Chore
+
+  - Add nuxt compatible version in peerDependencies ([073a31f](https://github.com/zadigetvoltaire/nuxt-well-known/commit/073a31f))
+  - Add nuxt compatible version in module meta ([05e0e70](https://github.com/zadigetvoltaire/nuxt-well-known/commit/05e0e70))
+
+### ❤️  Contributors
+
+- LouisMazel <mazuel.loic@gmail.com>
+
 ## v0.0.5
 
 [compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.4...v0.0.5)
