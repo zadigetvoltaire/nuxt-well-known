@@ -15,6 +15,8 @@
 
 Nuxt Well-Known module is integrated with the [Nuxt Devtools](https://github.com/nuxt/devtools).
 
+- [✨ &nbsp;Release Notes](/CHANGELOG.md)
+
 ## Well-Known URIs Supported
 
 1. [`security.txt`](#securitytxt)
