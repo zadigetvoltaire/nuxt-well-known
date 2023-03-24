@@ -1,5 +1,13 @@
 <!-- omit in toc -->
 
+<div align="center">
+	<br>
+	<a href="https://zadig-et-voltaire.com/">
+		<img src="assets/zadigetvoltaire-logo.svg" width="400" height="100" alt="Click to see the source">
+	</a>
+	<br>
+</div>
+
 [![npm version][npm-version-src]][npm-version-href]
 [![npm downloads][npm-downloads-src]][npm-downloads-href]
 [![License][license-src]][license-href]
@@ -111,7 +119,7 @@ type ChangePasswordOptions = {
 
 #### `content-uris`
 
-With this middleware, you can generate urls with content
+With this middleware, you can generate uris with content
 
 ```ts
 type ContentUriOptions = {
@@ -178,13 +186,15 @@ This command will:
 - Generate the CHANGELOG.md and push it with a release commit
 - Bump the package version
 - Create and push the new tag
-- Create a github release to trigger the library publish pipeline
+- Create a GitHub release to trigger the library publish pipeline
 
 ```bash
 pnpm release
 ```
 
 ---
+
+Powered by Zadig&Voltaire ©
 
 <!-- Badges -->
 [npm-version-src]: https://img.shields.io/npm/v/@zadigetvoltaire/nuxt-well-known/latest.svg?style=flat&colorA=18181B&colorB=28CF8D
