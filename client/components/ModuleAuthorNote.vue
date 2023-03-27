@@ -1,4 +1,3 @@
-
 <template>
   <NTip
     n="teal"
