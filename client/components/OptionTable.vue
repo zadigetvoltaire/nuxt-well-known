@@ -23,6 +23,8 @@ function objectToTable (options: Record<string, string>) {
       row.append(valueCell)
     } else {
       const valueCell = document.createElement('td')
+      valueCell.classList.add('truncate')
+      valueCell.style.maxWidth = '400px'
       valueCell.textContent = value
       row.append(valueCell)
     }
@@ -65,7 +67,7 @@ watchEffect(() => {
   }
 
   .table-options-container table {
-    @apply w-full text-sm;
+    @apply w-full max-w-screen text-sm;
   }
 
   .table-options-container table tr th {
