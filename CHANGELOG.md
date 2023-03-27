@@ -1,6 +1,28 @@
 # Changelog
 
 
+## v0.0.7
+
+[compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.6...v0.0.7)
+
+
+### 🚀 Enhancements
+
+  - Display configuration and URIs in devtools view ([e334e73](https://github.com/zadigetvoltaire/nuxt-well-known/commit/e334e73))
+
+### 📖 Documentation
+
+  - Add logo and zv mentions in README ([1d5a304](https://github.com/zadigetvoltaire/nuxt-well-known/commit/1d5a304))
+
+### 🏡 Chore
+
+  - Add logo svg ([585c0ca](https://github.com/zadigetvoltaire/nuxt-well-known/commit/585c0ca))
+  - Replace ZV mention ([e4c5c96](https://github.com/zadigetvoltaire/nuxt-well-known/commit/e4c5c96))
+
+### ❤️  Contributors
+
+- LouisMazel <me@loicmazuel.com>
+
 ## v0.0.6
 
 [compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.5...v0.0.6)
