@@ -1,7 +1,5 @@
 <script setup lang="ts">
-import { useDevtoolsClient } from '@nuxt/devtools/iframe-client'
-
-// import wellKnownOptions from '#well-known'
+import { useDevtoolsClient } from '@nuxt/devtools-kit/iframe-client'
 
 const client = useDevtoolsClient()
 
@@ -35,19 +33,19 @@ const moduleOptions = nuxtConfig?.wellKnown
         </h2>
 
         <a
-          v-if="moduleOptions?.securityTxt"
+          v-if="moduleOptions?.securityTxt && !moduleOptions?.securityTxt.disabled"
           href="/.well-known/security.txt"
           class="hover:underline text-green"
         >
-          /.well-known/security.txt <span v-if="moduleOptions?.securityTxt?.disabled">(disabled)</span>
+          /.well-known/security.txt
         </a>
 
         <a
-          v-if="!moduleOptions?.changePassword?.disabled"
-          href="/.well-known/change-passord"
+          v-if="moduleOptions?.changePassword && !moduleOptions?.changePassword.disabled"
+          href="/.well-known/change-password"
           class="hover:underline text-green"
         >
-          /.well-known/change-passord
+          /.well-known/change-password
         </a>
 
         <template v-if="moduleOptions?.contentUris">
