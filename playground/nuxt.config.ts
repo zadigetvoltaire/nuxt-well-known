@@ -24,7 +24,10 @@ export default defineNuxtConfig({
       wellKnown: {
         securityTxt: {
           expires: new Date('2026-02-03').toISOString()
-        }
+        },
+        contentUris: [
+          { path: 'apple-developer-merchantid-domain-association', content: 'merchantid-overrided' }
+        ]
       }
     }
   }

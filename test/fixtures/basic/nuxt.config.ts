@@ -19,5 +19,14 @@ export default defineNuxtConfig({
       { path: 'apple-developer-merchantid-domain-association', content: 'merchantid' },
       { path: 'content-uri.txt', content: 'content-uri' }
     ]
+  },
+  runtimeConfig: {
+    public: {
+      wellKnown: {
+        contentUris: [
+          { path: 'apple-developer-merchantid-domain-association', content: 'merchantid-overrided' }
+        ]
+      }
+    }
   }
 })

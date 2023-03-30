@@ -22,7 +22,7 @@ describe('ssr', async () => {
   it('render apple-developer-merchantid-domain-association with right content', async () => {
     const body = await $fetch('/.well-known/apple-developer-merchantid-domain-association')
 
-    expect(body).toMatch(/merchantid/)
+    expect(body).toMatch(/merchantid-overrided/)
   })
 
   it('render content-uri.txt with right content', async () => {
