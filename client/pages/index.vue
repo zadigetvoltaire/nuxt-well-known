@@ -4,7 +4,7 @@ import { useDevtoolsClient } from '@nuxt/devtools-kit/iframe-client'
 const client = useDevtoolsClient()
 
 const nuxtConfig = await client.value?.devtools.rpc.getServerConfig()
-const moduleOptions = nuxtConfig?.wellKnown
+const moduleOptions = nuxtConfig?.runtimeConfig.public.wellKnown
 </script>
 
 <template>
@@ -25,7 +25,17 @@ const moduleOptions = nuxtConfig?.wellKnown
 
       <ModuleAuthorNote icon="carbon-align-box-top-left" />
 
-      <OptionTable v-if="moduleOptions" :options="moduleOptions" />
+      <div class="flex-1">
+        <OptionTable v-if="moduleOptions" :options="moduleOptions" class="my-2" />
+
+        <template v-else>
+          <NTip n="yellow" class="mt-2">
+            <p>
+              ⚠️ No configuration found
+            </p>
+          </NTip>
+        </template>
+      </div>
 
       <div class="flex flex-col gap-2 flex-1 items-start py-2">
         <h2 class="w-full text-xl font-bold">

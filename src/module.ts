@@ -1,4 +1,5 @@
 import { defineNuxtModule, addServerHandler, createResolver, addTemplate } from '@nuxt/kit'
+import { defu } from 'defu'
 import { setupDevToolsUI } from './devtools'
 import type { ChangePasswordOptions, SecurityTxtOptions, ContentUriOptions } from './types'
 
@@ -13,6 +14,12 @@ export interface ModuleOptions {
    * @default true
    */
   devtools: boolean
+}
+
+declare module '@nuxt/schema' {
+  interface PublicRuntimeConfig {
+    wellKnown: ModuleOptions
+  }
 }
 
 const WELL_KNOWN_PREFIX = '.well-known'
@@ -34,10 +41,14 @@ export default defineNuxtModule<ModuleOptions>({
   setup (options, nuxt) {
     const { resolve } = createResolver(import.meta.url)
 
+    const moduleOptions: ModuleOptions = defu(nuxt.options.runtimeConfig.public.wellKnown, options)
+
+    nuxt.options.runtimeConfig.public.wellKnown = moduleOptions
+
     nuxt.options.alias['#well-known'] = addTemplate({
       filename: 'well-known.mjs',
       write: true,
-      getContents: () => `export default ${JSON.stringify(options, undefined, 2)}`
+      getContents: () => `export default ${JSON.stringify(moduleOptions, undefined, 2)}`
     }).dst || ''
 
     const runtimeDirectory = resolve('./runtime')

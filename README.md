@@ -53,6 +53,18 @@ export default defineNuxtConfig({
   modules: [
     '@zadigetvoltaire/nuxt-well-known'
   ],
+})
+```
+
+3. Add configuration in `nuxtConfig.wellKnown` or in `nuxtConfig.runtimeConfig.public.wellKnown`
+
+This module supports 2 ways of configuration:
+- Directly in key `wellKnown` of the Nuxt config
+- In public runtimeConfig: useful to override the config with environment variables and handle multiple environments
+
+```js
+export default defineNuxtConfig({
+  ...
   wellKnown: {
     devtools: true,
     securityTxt: {
@@ -63,6 +75,23 @@ export default defineNuxtConfig({
     changePassword: {
       disabled: false,
       redirectTo: 'https://example.com/password-recovery'
+    }
+  }
+  ...
+  runtimeConfig: {
+    public: {
+      wellKnown: {
+        devtools: true,
+        securityTxt: {
+          disabled: false,
+          contacts: ['me@example.com'],
+          expires: new Date('2025-02-03').toISOString() // ⚠️ in runtime config, `expires` should be a string
+        },
+        changePassword: {
+          disabled: false,
+          redirectTo: 'https://example.com/password-recovery'
+        }
+      }
     }
   }
 })
