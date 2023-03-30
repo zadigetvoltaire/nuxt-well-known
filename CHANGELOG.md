@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v0.0.9
+
+[compare changes](https://undefined/undefined/compare/v0.0.8...v0.0.9)
+
+
+### 🚀 Enhancements
+
+  - Add support of nuxt public runtime config ([4bb71c0](https://undefined/undefined/commit/4bb71c0))
+
+### 🏡 Chore
+
+  - Upgrade dependencies ([8b13fcf](https://undefined/undefined/commit/8b13fcf))
+
+### ✅ Tests
+
+  - Add unit tests for support of runtime config ([1849dcf](https://undefined/undefined/commit/1849dcf))
+
+### ❤️  Contributors
+
+- LouisMazel <me@loicmazuel.com>
+
 ## v0.0.8
 
 [compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.7...v0.0.8)
