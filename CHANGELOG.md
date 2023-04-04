@@ -1,6 +1,21 @@
 # Changelog
 
 
+## v0.0.10
+
+[compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.9...v0.0.10)
+
+
+### 🏡 Chore
+
+  - Downgrade changelogen to 0.5.1 ([9ed32d2](https://github.com/zadigetvoltaire/nuxt-well-known/commit/9ed32d2))
+  - Upgrade dependencies ([b45bc1a](https://github.com/zadigetvoltaire/nuxt-well-known/commit/b45bc1a))
+  - Update repository url in package.json ([5c477e3](https://github.com/zadigetvoltaire/nuxt-well-known/commit/5c477e3))
+
+### ❤️  Contributors
+
+- LouisMazel <me@loicmazuel.com>
+
 ## v0.0.9
 
 [compare changes](https://undefined/undefined/compare/v0.0.8...v0.0.9)
