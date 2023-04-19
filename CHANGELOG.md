@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.0.11
+
+[compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.10...v0.0.11)
+
+
+### 🏡 Chore
+
+  - Upgrade dependencies ([0d0a999](https://github.com/zadigetvoltaire/nuxt-well-known/commit/0d0a999))
+
+### ❤️  Contributors
+
+- LouisMazel <me@loicmazuel.com>
+
 ## v0.0.10
 
 [compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.9...v0.0.10)
