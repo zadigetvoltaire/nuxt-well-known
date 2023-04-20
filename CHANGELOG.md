@@ -1,6 +1,19 @@
 # Changelog
 
 
+## v0.0.12
+
+[compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.11...v0.0.12)
+
+
+### 🩹 Fixes
+
+  - Make devtools option not required ([e0fad9f](https://github.com/zadigetvoltaire/nuxt-well-known/commit/e0fad9f))
+
+### ❤️  Contributors
+
+- LouisMazel <me@loicmazuel.com>
+
 ## v0.0.11
 
 [compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.10...v0.0.11)
