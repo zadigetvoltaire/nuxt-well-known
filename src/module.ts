@@ -13,7 +13,7 @@ export interface ModuleOptions {
    *
    * @default true
    */
-  devtools: boolean
+  devtools?: boolean
 }
 
 declare module '@nuxt/schema' {

@@ -106,7 +106,7 @@ interface ModuleOptions {
    *
    * @default true
    */
-  devtools: boolean
+  devtools?: boolean
   securityTxt?: SecurityTxtOptions,
   changePassword?: ChangePasswordOptions,
   contentUris?: ContentUriOptions[],
