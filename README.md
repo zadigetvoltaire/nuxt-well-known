@@ -1,9 +1,10 @@
 <!-- omit in toc -->
+<!-- markdownlint-disable MD033 MD041 MD010 -->
 
-<div align="center">
+<div align="center" style="background-color: white;">
 	<br>
 	<a href="https://zadig-et-voltaire.com/">
-		<img src="assets/zadigetvoltaire-logo.svg" width="400" height="100" alt="Click to see the source">
+		<img src="https://design-system.zadig-et-voltaire.com/logos/logo.svg" width="400" height="100" alt="Click to see the source">
 	</a>
 	<br>
 </div>
