@@ -1,6 +1,27 @@
 # Changelog
 
 
+## v0.0.13
+
+[compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.12...v0.0.13)
+
+
+### 💅 Refactors
+
+  - Improve nuxt config types ([25330db](https://github.com/zadigetvoltaire/nuxt-well-known/commit/25330db))
+
+### 📖 Documentation
+
+  - Update logo in readme ([eea0ea2](https://github.com/zadigetvoltaire/nuxt-well-known/commit/eea0ea2))
+
+### 🏡 Chore
+
+  - Upgrade dependencies ([512a83a](https://github.com/zadigetvoltaire/nuxt-well-known/commit/512a83a))
+
+### ❤️  Contributors
+
+- LouisMazel <me@loicmazuel.com>
+
 ## v0.0.12
 
 [compare changes](https://github.com/zadigetvoltaire/nuxt-well-known/compare/v0.0.11...v0.0.12)
