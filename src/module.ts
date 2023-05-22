@@ -18,7 +18,10 @@ export interface ModuleOptions {
 
 declare module '@nuxt/schema' {
   interface PublicRuntimeConfig {
-    wellKnown: ModuleOptions
+    wellKnown?: ModuleOptions
+  }
+  interface NuxtConfig {
+    wellKnown?: ModuleOptions
   }
 }
 
