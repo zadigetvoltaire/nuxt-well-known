@@ -174,14 +174,17 @@ export default defineNuxtConfig({
 
       // iOS Universal Links example
       {
-        applinks: {
-          apps: [],
-          details: [
-            {
-              appID: 'TEAMID.BUNDLEID',
-              paths: ['*']
-            }
-          ]
+        path: 'apple-app-site-association',
+        content: {
+          applinks: {
+            apps: [],
+            details: [
+              {
+                appID: 'TEAMID.BUNDLEID',
+                paths: ['*']
+              }
+            ]
+          }
         }
       },
 
