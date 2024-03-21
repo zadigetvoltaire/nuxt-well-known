@@ -20,5 +20,5 @@ export interface ChangePasswordOptions extends DefaultOptions {
 
 export interface ContentUriOptions extends DefaultOptions {
   path: string;
-  content: string;
+  content: string | Record<any, any>;
 }

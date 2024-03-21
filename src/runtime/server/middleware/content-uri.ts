@@ -2,6 +2,7 @@ import { defineEventHandler, setHeader, sendError, H3Error } from 'h3'
 import { ContentUriOptions } from '../../../types'
 // @ts-ignore
 import wellKnownOptions from '#well-known'
+import { isPlainObject } from '@vue/shared'
 
 export default defineEventHandler((event) => {
   const url = event.node.req.url
@@ -10,13 +11,20 @@ export default defineEventHandler((event) => {
     throw sendError(event, new H3Error('no url found in request'))
   }
 
-  setHeader(event, 'Content-Type', 'text/plain')
-
   const path = url.split('/').pop()
+  const contentUri = wellKnownOptions.contentUris.find(
+    ({ path: optionPath }) => optionPath === path
+  )
 
-  return render(wellKnownOptions.contentUris.find(({ path: optionPath }) => optionPath === path))
+  setHeader(
+    event,
+    'Content-Type',
+    isPlainObject(contentUri.content) ? 'application/json' : 'text/plain'
+  )
+
+  return render(contentUri)
 })
 
-function render (options: ContentUriOptions) {
+function render(options: ContentUriOptions) {
   return options.content
 }

@@ -170,7 +170,38 @@ export default defineNuxtConfig({
   wellKnown: {
     contentUris: [
       { path: 'apple-developer-merchantid-domain-association', content: 'merchantid' },
-      { path: 'content-uri.txt', content: 'content-uri' }
+      { path: 'content-uri.txt', content: 'content-uri' },
+
+      // iOS Universal Links example
+      {
+        path: 'apple-app-site-association',
+        content: {
+          applinks: {
+            apps: [],
+            details: [
+              {
+                appID: 'TEAMID.BUNDLEID',
+                paths: ['*']
+              }
+            ]
+          }
+        }
+      },
+
+      // Android App Links example
+      {
+        path: 'assetlinks.json',
+        content: [
+          {
+            relation: ['delegate_permission/common.handle_all_urls'],
+            target: {
+              namespace: 'android_app',
+              package_name: 'com.netkosoft.beerswift',
+              sha256_cert_fingerprints: ['43:12:D4:27:D7:C4:14...']
+            }
+          }
+        ]
+      },
     ]
   }
 })
