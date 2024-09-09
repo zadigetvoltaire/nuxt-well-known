@@ -37,14 +37,7 @@ Nuxt Well-Known module is integrated with the [Nuxt Devtools](https://github.com
 1. Add `@zadigetvoltaire/nuxt-well-known` dependency to your project
 
 ```bash
-# Using pnpm
-pnpm add -D @zadigetvoltaire/nuxt-well-known
-
-# Using yarn
-yarn add --dev @zadigetvoltaire/nuxt-well-known
-
-# Using npm
-npm install --save-dev @zadigetvoltaire/nuxt-well-known
+npx nuxi@latest module add well-known
 ```
 
 2. Add `@zadigetvoltaire/nuxt-well-known` to the `modules` section of `nuxt.config.ts`
