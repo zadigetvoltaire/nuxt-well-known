@@ -30,7 +30,7 @@
     "test:watch": "vitest watch"
   },
   "dependencies": {
-    "@nuxt/kit": "^3.5.1",
+    "@nuxt/kit": "^3.19.2",
     "defu": "^6.1.2",
     "sirv": "^2.0.3"
   },
